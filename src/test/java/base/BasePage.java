@@ -16,7 +16,7 @@ import java.time.Duration;
 public class BasePage {
     protected WebDriver driver;
     protected Actions actions;
-    protected Wait wait;
+    protected static Wait wait;
 
     public BasePage(WebDriver driver){
         this.driver = driver;
@@ -28,7 +28,7 @@ public class BasePage {
         return (WebElement) wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(locator)));
     }
 
-    protected WebElement waitUntilElementToBeClickable(String locator){
+    protected static WebElement waitUntilElementToBeClickable(String locator){
         return (WebElement) wait.until(ExpectedConditions.elementToBeClickable(By.xpath(locator)));
     }
 
