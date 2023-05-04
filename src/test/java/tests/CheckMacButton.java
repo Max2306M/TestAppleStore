@@ -35,7 +35,7 @@ public class CheckMacButton extends BaseTest {
         assertTrue(driver.findElement(By.xpath("//div[@data-autom='mac-product-summary-14inch-better']")).isDisplayed());
 
         final String select = "//h2[@id='productbundle-title-14inch-better']";
-        scrollToElement(driver, driver.findElement(By.xpath(select)));
+        scrollToElement(driver.findElement(By.xpath(select)));
         driver.findElement(By.xpath("//div[@data-autom='mac-product-summary-14inch-better']//button[@type='submit']")).click();
         sleep(2000);
 

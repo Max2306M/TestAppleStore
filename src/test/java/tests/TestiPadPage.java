@@ -18,6 +18,7 @@ import static org.testng.AssertJUnit.assertTrue;
 
 public class TestiPadPage extends BaseTest {
     private static final String HOME_PAGE_URL = "https://www.apple.com/";
+
     @Test
     public void testIpadPage() throws InterruptedException {
         get(HOME_PAGE_URL);
@@ -36,7 +37,6 @@ public class TestiPadPage extends BaseTest {
         assert driver.getCurrentUrl().equals("https://www.apple.com/shop/buy-ipad/ipad-pro");
 
         driver.findElement(By.xpath("//*[@id='root']/div[3]/div[2]/div[2]/div/div[1]/div[1]/div[1]")).click();
-        scrollToElement(driver.findElement(By.xpath("//*[@id='root']/div[3]/div[2]/div[2]/div/div[2]/div/div[1]/label")));
         driver.findElement(By.xpath("//*[@id='root']/div[3]/div[2]/div[2]/div/div[2]/div/div[1]/label")).click();
         sleep(2000);
         driver.findElement(By.xpath("//*[@id='root']/div[3]/div[2]/div[2]/div/div[3]/div[1]/div[3]")).click();

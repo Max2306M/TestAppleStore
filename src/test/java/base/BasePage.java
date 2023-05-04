@@ -32,6 +32,10 @@ public class BasePage {
         return (WebElement) wait.until(ExpectedConditions.elementToBeClickable(By.xpath(locator)));
     }
 
+    protected WebElement waitPresenceOfElementLocated(String locator){
+        return (WebElement) wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(locator)));
+    }
+
     protected void moveCursor(WebElement element){
         Actions actions = new Actions(driver);
         actions.moveToElement(element).build().perform();

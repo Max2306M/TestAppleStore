@@ -29,7 +29,7 @@ public class BaseTest {
         return driver;
     }
 
-    public void scrollToElement(WebDriver driver, WebElement element){
+    public void scrollToElement(WebElement element){
 //        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
         JavascriptExecutor js2 = (JavascriptExecutor) driver;
         js2.executeScript("arguments[0].scrollIntoView(true);", element);
